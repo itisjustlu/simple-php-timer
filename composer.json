@@ -9,12 +9,12 @@
     ],
     "autoload": {
         "psr-4": {
-            "LucasRuroken\\Timer\\": "src/"
+            "LucasRuroken\\SimplePhpTimer\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "LucasRuroken\\Timer\\Tests\\": "tests/"
+            "LucasRuroken\\SimplePhpTimer\\Tests\\": "tests/"
         }
     },
     "require": {
