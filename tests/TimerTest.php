@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Https\Helpers;
+namespace LucasRuroken\SimplePhpTimer\Tests;
 
 use LucasRuroken\SimplePhpTimer\Timer;
 use PHPUnit\Framework\TestCase;

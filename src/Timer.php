@@ -2,25 +2,18 @@
 
 namespace LucasRuroken\SimplePhpTimer;
 
+use LucasRuroken\SimplePhpTimer\Concerns\Dayable;
+use LucasRuroken\SimplePhpTimer\Concerns\Hourable;
+use LucasRuroken\SimplePhpTimer\Concerns\Minutable;
+use LucasRuroken\SimplePhpTimer\Concerns\Monthable;
+use LucasRuroken\SimplePhpTimer\Concerns\Secondable;
+use LucasRuroken\SimplePhpTimer\Concerns\Weekable;
+use LucasRuroken\SimplePhpTimer\Concerns\Yearable;
+
 class Timer
 {
-    const NEGATIVE = '-';
-    const POSITIVE = '+';
+    use Secondable, Minutable, Hourable, Dayable, Weekable, Monthable, Yearable;
 
-    private $seconds;
-    private $secondSymbol;
-    private $minutes;
-    private $minuteSymbol;
-    private $hours;
-    private $hourSymbol;
-    private $days;
-    private $daySymbol;
-    private $weeks;
-    private $weekSymbol;
-    private $months;
-    private $monthSymbol;
-    private $years;
-    private $yearSymbol;
     private $format;
 
     /**
@@ -36,174 +29,6 @@ class Timer
      */
     public function today()
     {
-        return $this;
-    }
-
-    /**
-     * @param int $seconds
-     * @return $this
-     */
-    public function secondsAgo($seconds = 1)
-    {
-        $this->secondSymbol = self::NEGATIVE;
-        $this->seconds = $seconds;
-
-        return $this;
-    }
-
-    /**
-     * @param int $seconds
-     * @return $this
-     */
-    public function seconds($seconds = 1)
-    {
-        $this->secondSymbol = self::POSITIVE;
-        $this->seconds = $seconds;
-
-        return $this;
-    }
-
-    /**
-     * @param int $minutes
-     * @return $this
-     */
-    public function minutesAgo($minutes = 1)
-    {
-        $this->minuteSymbol = self::NEGATIVE;
-        $this->minutes = $minutes;
-
-        return $this;
-    }
-
-    /**
-     * @param int $minutes
-     * @return $this
-     */
-    public function minutes($minutes = 1)
-    {
-        $this->minuteSymbol = self::POSITIVE;
-        $this->minutes = $minutes;
-
-        return $this;
-    }
-
-    /**
-     * @param int $hours
-     * @return $this
-     */
-    public function hoursAgo($hours = 1)
-    {
-        $this->hourSymbol = self::NEGATIVE;
-        $this->hours = $hours;
-
-        return $this;
-    }
-
-    /**
-     * @param int $hours
-     * @return $this
-     */
-    public function hours($hours = 1)
-    {
-        $this->hourSymbol = self::POSITIVE;
-        $this->hours = $hours;
-
-        return $this;
-    }
-
-    /**
-     * @param int $days
-     * @return $this
-     */
-    public function daysAgo($days = 1)
-    {
-        $this->daySymbol = self::NEGATIVE;
-        $this->days = $days;
-
-        return $this;
-    }
-
-    /**
-     * @param int $days
-     * @return $this
-     */
-    public function days($days = 1)
-    {
-        $this->daySymbol = self::POSITIVE;
-        $this->days = $days;
-
-        return $this;
-    }
-
-    /**
-     * @param int $weeks
-     * @return $this
-     */
-    public function weeksAgo($weeks = 1)
-    {
-        $this->weekSymbol = self::NEGATIVE;
-        $this->weeks = $weeks;
-
-        return $this;
-    }
-
-    /**
-     * @param int $weeks
-     * @return $this
-     */
-    public function weeks($weeks = 1)
-    {
-        $this->weekSymbol = self::POSITIVE;
-        $this->weeks = $weeks;
-
-        return $this;
-    }
-
-    /**
-     * @param int $months
-     * @return $this
-     */
-    public function monthsAgo($months = 1)
-    {
-        $this->monthSymbol = self::NEGATIVE;
-        $this->months = $months;
-
-        return $this;
-    }
-
-    /**
-     * @param int $months
-     * @return $this
-     */
-    public function months($months = 1)
-    {
-        $this->monthSymbol = self::POSITIVE;
-        $this->months = $months;
-
-        return $this;
-    }
-
-    /**
-     * @param int $years
-     * @return $this
-     */
-    public function yearsAgo($years = 1)
-    {
-        $this->yearSymbol = self::NEGATIVE;
-        $this->years = $years;
-
-        return $this;
-    }
-
-    /**
-     * @param int $years
-     * @return $this
-     */
-    public function years($years = 1)
-    {
-        $this->yearSymbol = self::POSITIVE;
-        $this->years = $years;
-
         return $this;
     }
 
