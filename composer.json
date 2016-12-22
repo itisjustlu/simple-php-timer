@@ -1,0 +1,26 @@
+{
+    "name": "lucasruroken/simple-php-timer",
+    "description": "An elegant timer solution for php",
+    "authors": [
+        {
+            "name": "lucasruroken",
+            "email": "lucasjavierjuarez@hotmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "LucasRuroken\\Timer\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "LucasRuroken\\Timer\\Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "php": ">=5.6"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.7"
+    }
+}
