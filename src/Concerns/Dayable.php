@@ -30,4 +30,12 @@ trait Dayable
 
         return $this;
     }
+
+    /**
+     * @return $this
+     */
+    public function today()
+    {
+        return $this;
+    }
 }

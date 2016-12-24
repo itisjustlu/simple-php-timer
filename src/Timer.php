@@ -25,14 +25,6 @@ class Timer
     }
 
     /**
-     * @return $this
-     */
-    public function today()
-    {
-        return $this;
-    }
-
-    /**
      * @param $format
      * @return $this
      */
