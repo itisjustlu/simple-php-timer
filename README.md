@@ -44,6 +44,12 @@ echo (new Timer())->years(3)->days(2);
 ```
 This prints 3 years and 2 days from today
 
+If you don't like to type **(new Timer())->function();**, 
+you are able to call a static function
+```
+echo Timer::create()->yestarday();
+```
+
 ### List of methods
 * **->seconds()** + seconds
 * **->secondsAgo()** - seconds
@@ -57,6 +63,8 @@ This prints 3 years and 2 days from today
 * **->monthsAgo()** - months
 * **->years()** + years
 * **->yearsAgo()** - years
+* **->today()** - return current date
+* **->yesterday()** - return yesterday date
 * **->format()** Override default format
 * **->get()** return time
 
