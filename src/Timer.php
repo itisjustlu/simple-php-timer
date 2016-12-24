@@ -25,6 +25,14 @@ class Timer
     }
 
     /**
+     * @return $this
+     */
+    public static function create()
+    {
+        return new Timer();
+    }
+
+    /**
      * @param $format
      * @return $this
      */

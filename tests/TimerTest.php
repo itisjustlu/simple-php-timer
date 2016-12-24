@@ -12,6 +12,16 @@ class TimerHelperTest extends TestCase
         $this->assertEquals(date('Y-m-d H:i:s'), (new Timer())->today()->get());
     }
 
+    public function test_yestarday()
+    {
+        $this->assertEquals(date('Y-m-d H:i:s', strtotime("-1 day")), (new Timer())->yesterday());
+    }
+
+    public function test_staticCreate()
+    {
+        $this->assertEquals(date('Y-m-d H:i:s', strtotime("-1 day")), Timer::create()->yesterday());
+    }
+
     public function test_seconds()
     {
         $this->assertEquals(date('Y-m-d H:i:s', strtotime("-3 second")), (new Timer())->secondsAgo(3)->get());

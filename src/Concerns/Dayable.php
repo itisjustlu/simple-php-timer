@@ -38,4 +38,12 @@ trait Dayable
     {
         return $this;
     }
+
+    /**
+     * @return $this
+     */
+    public function yesterday()
+    {
+        return $this->daysAgo(1);
+    }
 }
