@@ -12,7 +12,7 @@ composer require lucasruroken/simple-php-timer
 or just add into your composer.php
 ```
 "require": {
-    "lucasruroken/simple-php-timer": "dev-master"
+    "lucasruroken/simple-php-timer": "~1.0"
 },
 ```
 
