@@ -17,7 +17,7 @@ or just add into your composer.php
 ```
 
 ### How to use?
-First of all, you need to include de **Timer** class
+First of all, you need to include the **Timer** class
 ```
 use LucasRuroken\SimplePhpTimer\Timer;
 ```
@@ -47,7 +47,7 @@ This prints 3 years and 2 days from today
 If you don't like to type **(new Timer())->function();**, 
 you are able to call a static function
 ```
-echo Timer::create()->yestarday();
+echo Timer::create()->yesterday();
 ```
 
 ### List of methods
